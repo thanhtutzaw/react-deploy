@@ -4,6 +4,8 @@ import React from 'react';
 import Fun from './Funevent';
 import Clevent from './Clevent';
 import State from './Setstate';
+import Bind from './Bindevent';
+import If from './If';
 // import React, { Component } from 'react';
 // class App extends Component {
 //   // state = {  }
@@ -39,9 +41,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <If />
+<Bind />
 <Fun />
 <Clevent />
 <State />
+
 
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>

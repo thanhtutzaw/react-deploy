@@ -7,21 +7,36 @@ var numtwo = num;
 var interval;
 
 class State extends Component {
-    
-    state = {
-        count: 0,
-        // interval:num
-        num:0
+    constructor(props){
+        super(props)
+        this.state = {
+            count:0
+        }
     }
+    
+    // state = {
+    //     count: 0,
+    //     // interval:num
+    //     num:0
+    // }
        
     increase(){
-        interval = setInterval(function(){
-    num = ++num;
-    console.log(num);
+       this.interval = setInterval(() => {
+           this.setState(prevState=>({
+               count :prevState.count +1
+        
+        }))
+       }, 100);
+    }
+
+
+
+    // num = ++num;
+    // console.log(num);
     // this.state({
     //     // num:this.state.num++
     // })
-}, 100);
+ // }, 100);
 
 
         // this.setState({
@@ -33,7 +48,7 @@ class State extends Component {
         
 
 
-    this.setState({
+    // this.setState({
         // num:this.state.setInterval()
         // num: this.state.num+1
         // interval:this.state.num
@@ -46,7 +61,7 @@ class State extends Component {
 
 
         
-    })
+    // })
     
 
 
@@ -58,25 +73,35 @@ class State extends Component {
         // },()=>{console.log("callback increase value= ",this.state.count)} )
 
     
-    }
+    // }
 
     noincrease(){
-            clearInterval(interval);
+            clearInterval(this.interval);
     }
 
     decrease(){
-        this.setState({
-            count: this.state.count -1
-        },()=>{console.log("callback decrease value= ",this.state.count)} )
+           this.interval = setInterval(() => {
+           this.setState(prevState=>({
+               count :prevState.count - 1
+        
+        }))
+       }, 100);
+        // this.setState({
+        //     count: this.state.count -1
+        // },()=>{console.log("callback decrease value= ",this.state.count)} )
+    }
+    nodecrease(){
+            clearInterval(this.interval);
     }
     render() { 
+        const {count} = this.state
         return ( 
 
             <div>
                 
-                <button onMouseOver={()=>this.increase()}  onMouseOut={()=>this.noincrease()} className="icon">+</button>
-                <h3>Count {this.state.num}</h3>
-                <button onMouseOver={()=>this.decrease()} className="icon">-</button>
+                <button onMouseOver={()=>this.increase()}  onMouseOut={()=>this.noincrease()} className="icon padding">+</button>
+                <h3>Count {count}</h3>
+                <button onMouseOver={()=>this.decrease()} onMouseOut={()=>this.nodecrease()}  className="icon padding">-</button>
             </div>
          );
     }

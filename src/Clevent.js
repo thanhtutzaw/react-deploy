@@ -13,7 +13,7 @@ class Clevent extends Component {
     }
     render() { 
         return ( 
-            <button id="pink" onClick={this.message} className="padding">Click me class component</button>
+            <button id="pink" onClick={this.message} className="padding">Hi Click me class component</button>
          );
     }
 }

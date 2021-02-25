@@ -100,7 +100,7 @@ class State extends Component {
             <div>
                 
                 <button onMouseOver={()=>this.increase()}  onMouseOut={()=>this.noincrease()} className="icon padding">+</button>
-                <h3>Count {count}</h3>
+                <h3>Countttt {count}</h3>
                 <button onMouseOver={()=>this.decrease()} onMouseOut={()=>this.nodecrease()}  className="icon padding">-</button>
             </div>
          );

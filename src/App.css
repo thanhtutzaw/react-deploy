@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.label{
+
+  color:white !important;
+}
 .icon{
   /* border-radius: 25px; */
   font-size:4rem;

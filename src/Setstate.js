@@ -7,6 +7,8 @@ var numtwo = num;
 var interval;
 
 class State extends Component {
+
+
     constructor(props){
         super(props)
         this.state = {
@@ -22,10 +24,12 @@ class State extends Component {
        
     increase(){
        this.interval = setInterval(() => {
+
+
            this.setState(prevState=>({
                count :prevState.count +1
-        
         }))
+
        }, 100);
     }
 

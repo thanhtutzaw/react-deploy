@@ -6,6 +6,8 @@ import Clevent from './Clevent';
 import State from './Setstate';
 import Bind from './Bindevent';
 import If from './If';
+import Maplistrender from './Maplistrender';
+import Getmethodfakerestapi from './Getmethodfakerestapi';
 // import React, { Component } from 'react';
 // class App extends Component {
 //   // state = {  }
@@ -41,6 +43,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Getmethodfakerestapi />
+        <Maplistrender />
         <If />
 <Bind />
 <Fun />

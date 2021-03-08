@@ -9,6 +9,7 @@ import If from './If';
 import Maplistrender from './Maplistrender';
 import Getmethodfakerestapi from './Getmethodfakerestapi';
 import Postmethod from './Postmethod';
+import Form from './Form';
 // import React, { Component } from 'react';
 // class App extends Component {
 //   // state = {  }
@@ -44,6 +45,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Form />
         <Postmethod />
         <Getmethodfakerestapi />
         <Maplistrender />

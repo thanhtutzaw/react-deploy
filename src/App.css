@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.false{
+  color:red;
+}
+.true{
+  color:green;
+}
 .error{
   color:red;
 }

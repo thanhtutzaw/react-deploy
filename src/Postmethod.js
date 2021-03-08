@@ -16,10 +16,12 @@ class Postmethod extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log(this.state)
      axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
-        console.log(response);
+        console.log(response)
+        ;
         // this.setState({
         //   posts: response.data,
         // });
@@ -37,6 +39,7 @@ class Postmethod extends Component {
     return (
       <div>
         <h1>13. Post method</h1>
+
         <form onSubmit={this.handleSubmit}>
           <TextField
             InputLabelProps={{
@@ -83,6 +86,7 @@ class Postmethod extends Component {
             </Button>
           </div>
         </form>
+        
         <hr />
       </div>
     );

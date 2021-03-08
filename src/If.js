@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { TextField } from "@material-ui/core";
 import { Button } from "@material-ui/core";
+import './App.css';
 // import Classes from '@material-ui/core/Class';
 class If extends Component {
   // state = {
@@ -8,7 +9,7 @@ class If extends Component {
   //  }
 
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       condition: "null",
     };
@@ -66,7 +67,7 @@ class If extends Component {
           you typed={this.state.condition}
           <br />
           answer is hi
-          <h3>same hi</h3>
+          <h3 className="true">same hi</h3>
           <hr />
         </div>
       );
@@ -82,18 +83,20 @@ class If extends Component {
               label="Outlined"
               variant="outlined"
               onChange={this.handle}
-               InputLabelProps={{
-    style: { color: '#fff' },
-  }}
+              InputLabelProps={{
+                style: { color: "#fff" },
+              }}
             />
             <Button variant="contained" color="primary">
               My button
             </Button>
           </form>
+         
+          
           you typed={this.state.condition}
           <br />
           answer is hi
-          <h3>different</h3>
+          <h3 className="false">different</h3>
           <hr />
         </div>
       );

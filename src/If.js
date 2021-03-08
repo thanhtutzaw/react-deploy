@@ -95,7 +95,7 @@ class If extends Component {
           
           you typed={this.state.condition}
           <br />
-          answer is hi
+          real answer is hi
           <h3 className="false">different</h3>
           <hr />
         </div>

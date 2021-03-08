@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+.error{
+  color:red;
+}
+.list{
+  display:none;
+  color:green;
+}
 .label{
 
   color:white !important;

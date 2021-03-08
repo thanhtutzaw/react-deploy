@@ -8,6 +8,7 @@ import Bind from './Bindevent';
 import If from './If';
 import Maplistrender from './Maplistrender';
 import Getmethodfakerestapi from './Getmethodfakerestapi';
+import Postmethod from './Postmethod';
 // import React, { Component } from 'react';
 // class App extends Component {
 //   // state = {  }
@@ -43,6 +44,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Postmethod />
         <Getmethodfakerestapi />
         <Maplistrender />
         <If />

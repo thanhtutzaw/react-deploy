@@ -25,24 +25,27 @@ const Maplistrender = () => {
   return (
     <div>
       <h1>11. hey map list render 1</h1>
-      <h4>
-        Normal array
-        <hr />
-        {list.map((a) => (
-          <h3>{a}</h3>
-        ))}
-      </h4>
+      <h4>Normal array</h4>
+      <hr />
+      {list.map((a) => (
+        <h3 key={a}>{a}</h3>
+      ))}
+
       <br />
+
       <h3>Object array</h3>
       <hr />
+
       <h4>
-        {objects.map((object) => 
-        <Maplistrender2 object={object} />
-        // (
-        //   <h4>
-        //     {object.id} is my id and my name is {object.name}
-        //   </h4>
-        // )
+        {objects.map(
+          (object) => (
+            <Maplistrender2  object={object} key={object.id}   />
+          )
+          // (
+          //   <h4>
+          //     {object.id} is my id and my name is {object.name}
+          //   </h4>
+          // )
         )}
       </h4>
 
